@@ -88,7 +88,6 @@ public class StaffServlet extends HttpServlet {
 
             if (con != null){
                 DatabaseMetaData dm = con.getMetaData();
-                System.out.println("Driver name: " + dm.getDriverName());
 
 
                 Statement statement = con.createStatement();
@@ -111,7 +110,7 @@ public class StaffServlet extends HttpServlet {
             	        session.setAttribute("staffusername",stf.getStaffUsername());
             	        session.setAttribute("staffpassword",stf.getStaffPassword());
          	     
-                        response.sendRedirect("speakerlist.jsp");
+                        response.sendRedirect("Speaker.jsp");
 
 
                     }else{
