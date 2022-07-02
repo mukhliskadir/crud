@@ -1,0 +1,22 @@
+test 
+
+//bnda ni amik dari session
+int custid = Integer.parseInt(session.getAttribute("custid").toString());
+
+
+<sql:query dataSource="${ic}" var="oc">
+<c:set var="cust" value="<%=custid%>"/>
+			select * from # join # 
+			where id=?
+ <sql:param value="${cust}" />
+</sql:query>
+
+
+
+
+
+
+
+<c:if test="${result.topictheme=='Fiqh'}">
+      <td style="background-color: yellow;">${result.topictheme}</td>
+</c:if>
